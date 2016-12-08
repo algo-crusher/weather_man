@@ -1,0 +1,29 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div2 class="container">
+			{% if name %}
+				<h1>
+					Hello {{name}}!!
+				</h1>
+			{% else %}
+				<h1>
+					Hello, New visitor! What's your name?
+				</h1>
+					<form action="/">
+						<input type= "text" name= "name" >
+						<input type= "submit" value ="Submit">
+					</form>
+
+			{% endif%}
+				<a href="{{ url_for('about') }}">About my website</a>
+			
+			
+			</div2>
+		</div>
+	</body>
+</html>

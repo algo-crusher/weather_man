@@ -1,0 +1,29 @@
+from flask import Flask, render_template, request
+import html_geo_weather_function
+
+app = Flask(__name__)
+
+@app.route("/")
+
+
+
+
+
+def city_weather():
+	name = request.values.get("name")
+	city = request.values.get("city")
+	forecast = None
+	if city:
+
+		forecast = html_geo_weather_function.get_weather(city)
+		
+	return render_template('city_weather.html',
+                               name=name, city=city, forecast=forecast)
+# name(orange) is the assignment inside 
+# the templates, name(white), is the variable 
+# already assigned
+
+
+
+if __name__ == "__main__":
+    app.run()
