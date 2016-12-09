@@ -18,7 +18,7 @@ def city_weather():
 		forecast = html_geo_weather_function.get_weather(city)
 		
 	return render_template('city_weather.html',
-                               name=name, city=city, forecast=forecast)
+                           name=name, city=city, forecast=forecast)
 # name(orange) is the assignment inside 
 # the templates, name(white), is the variable 
 # already assigned
@@ -26,4 +26,5 @@ def city_weather():
 
 
 if __name__ == "__main__":
-    app.run()
+	port = int(os.environ.get("PORT",5000))
+    app.run(host="0.0.0.0", port = port)
