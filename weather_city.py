@@ -20,6 +20,11 @@ def city_weather():
 		
 	return render_template('city_weather.html',
                            name=name, city=city, forecast=forecast)
+	
+app.route("/about")
+
+def about():
+	return render_template('about.html')
 
 # name(orange) is the assignment inside 
 # the templates, name(white), is the variable 
