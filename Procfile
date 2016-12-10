@@ -1,1 +1,1 @@
-web: python weather_city
+web: python weather_city.py
