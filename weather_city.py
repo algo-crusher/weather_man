@@ -20,6 +20,7 @@ def city_weather():
 		
 	return render_template('city_weather.html',
                            name=name, city=city, forecast=forecast)
+	@app.route('/about')
 # name(orange) is the assignment inside 
 # the templates, name(white), is the variable 
 # already assigned
